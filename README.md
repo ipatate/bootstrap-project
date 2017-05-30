@@ -5,6 +5,7 @@ The base config use:
 * babel
 * sass/scss
 * postcss
+* flow
 
 File config for dev:
 * editorconfig file

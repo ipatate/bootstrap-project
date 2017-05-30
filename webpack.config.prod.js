@@ -14,12 +14,19 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
-        }
+        use: [
+            {
+              loader: 'babel-loader',
+            },
+            {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              presets: ['react'],
+              plugins: ['transform-class-properties'],
+            },
+          },
+        ]
       },
       {
         test: /\.scss$/,
