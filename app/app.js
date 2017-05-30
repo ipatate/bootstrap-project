@@ -1,13 +1,14 @@
+// @flow
 import styles from './scss/app.scss'
 import React from 'react';
 import { render } from 'react-dom';
 
-import { Link } from './link';
+import ChildExemple from './ChildExemple';
 
-const Main = ({ name }) => {
+const Main = ({ name }: { name: string }): ReactElement => {
     return <div>
         {name}
-        <Link />
+        <ChildExemple />
     </div>;
 }
 

@@ -16,14 +16,30 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        loader: 'eslint-loader',
+        options: {
+          configFile: '.eslintrc',
+        },
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
           loader: 'babel-loader',
           options: {
-          presets: ['env']
-          }
-        }
+            babelrc: false,
+            presets: ['react'],
+            plugins: ['transform-class-properties'],
+          },
+        },
+        ]
       },
       {
         test: /\.scss$/,
