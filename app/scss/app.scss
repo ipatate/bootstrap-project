@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    background: #FEFEFE;
+
+    h1 {
+        color: red;
+    }
+
+    a {
+        display: flex;
+        color: orange;
+    }
+}
