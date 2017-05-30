@@ -58,6 +58,9 @@ module.exports = {
       failOnError: false,
       quiet: false,
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
   ]
 }
