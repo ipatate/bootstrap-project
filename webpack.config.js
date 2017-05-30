@@ -1,9 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const styleLintPlugin = require('stylelint-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const extractSass = new ExtractTextPlugin('app.css');
 
 module.exports = {
   context: path.resolve(__dirname, './app'),

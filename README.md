@@ -6,9 +6,15 @@ The base config use:
 * sass/scss
 * postcss
 
-For dev:
+File config for dev:
 * editorconfig file
 * eslint (airbnb-base)
 * stylelint (airbnb config)
 
-No production webpack config for the moment.
+## For Dev ##
+
+    $ yarn watch
+
+## For Build ##
+
+    $ yarn build
